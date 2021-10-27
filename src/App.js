@@ -1,20 +1,20 @@
 import Header from "./Header"
 import Main from "./Main"
 import Footer from  "./Footer"
-import ItemCount from "./ItemCount";
+
 const App = () => {
-return(
+  
+  return(
     <>
         <Header 
-            nombre="Ricardo" 
-            apellido="Garrido"
-            edad={33}
-            callback={()=>{console.log(("soy un callback de app"));}}
-            />
-        <ItemCount/>
+              nombre="Ricardo" 
+              apellido="Garrido"
+              edad={33}
+              callback={()=>{console.log(("soy un callback de app"));}}
+              />
         <Main/>
         <Footer/>
     </>
-)
+  )
 };
 export default App

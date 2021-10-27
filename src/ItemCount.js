@@ -1,24 +1,22 @@
-import { useState } from "react";
+import {useState} from "react";
 
-const ItemCount = ({initial,stock}) => {
+const ItemCount = () => {
 
-    const [contador, setContador] = useState(initial)
-    const sumarContador = () =>{
-        if(contador < stock){
+    const [contador, setContador] = useState(0)
+    
+    const sumar = () =>{
             setContador(contador + 1)
-    }}
-
-    const restarContador = () =>{
-        if(contador > 0){
-            setContador(contador - 1)
     }
+
+    const restar = () =>{
+            setContador(contador - 1)
     }
     
     return (
         <>
-            <button onClick={sumarContador}>incrementar</button>
-            <button onClick={restarContador}>decrementar</button>
             <p>El contador va : {contador}</p>
+            <button onClick={sumar} className="material-icons">add</button>
+            <button onClick={restar} className="material-icons">remove</button>
         </>
     )
 }

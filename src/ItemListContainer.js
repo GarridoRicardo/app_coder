@@ -1,11 +1,8 @@
-const Item = ({producto,cantidad})  =>{
+const ItemListContainer = ({producto,cantidad})  =>{
     
-    //console.log(producto);
-    //console.log(cantidad);
-
     return(
         <p>Productos en Stock: {producto} Cantidad {cantidad}</p>
     )
 }
 
-export default Item
+export default ItemListContainer;
