@@ -10,8 +10,7 @@ const App = () => {
               nombre="Ricardo" 
               apellido="Garrido"
               edad={33}
-              callback={()=>{console.log(("soy un callback de app"));}}
-              />
+        />
         <Main/>
         <Footer/>
     </>

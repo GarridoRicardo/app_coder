@@ -8,10 +8,7 @@ const Main = () => {
                 producto ={"mates"} 
                 cantidad= {50}
             />
-            <ItemCount
-                inicial = {0}
-                stock = {100}
-            />
+            <ItemCount/>
     </>
     )
 }

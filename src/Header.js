@@ -1,8 +1,8 @@
 import Nav from "./NavBar"
-const Header = ({nombre,apellido, edad, callback}) => {
+const Header = ({nombre,apellido, edad}) => {
 
   console.log(edad);
-  console.log(callback); 
+
 
   return (
     <header id="header">
