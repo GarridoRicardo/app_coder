@@ -1,14 +1,13 @@
 import Nav from "./NavBar"
 const Header = ({nombre,apellido, edad}) => {
-
-  console.log(edad);
-
-
   return (
     <header id="header">
-      <h1>E-Commerce Ricardo</h1>
+      <h1>Comercio Ricardo Garrido</h1>
       <p>Bienvenido {nombre} {apellido}</p>
     <Nav/>
+    <div>
+      <h2>Productos</h2>
+      </div>
     </header>
   );
 };

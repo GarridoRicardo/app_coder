@@ -1,14 +1,11 @@
 import ItemListContainer from "./ItemListContainer"
-import ItemCount from "./ItemCount"
+import ItemDetailContainer from "./ItemDetailContainer"
 
 const Main = () => {
     return(
     <>
-            <ItemListContainer 
-                producto ={"mates"} 
-                cantidad= {50}
-            />
-            <ItemCount/>
+            <ItemListContainer/> 
+            <ItemDetailContainer/>
     </>
     )
 }
