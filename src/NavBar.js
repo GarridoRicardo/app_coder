@@ -13,17 +13,17 @@ const Nav = () => {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to={"/categoria/1"}>
+                    <Link to="/categoria/1" class="nav-link active" aria-current="page">
                         Categoria 1
                     </Link>
                     </li>
                     <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to={"/categoria/2"}>
+                    <Link to="/categoria/2" class="nav-link active" aria-current="page">
                         Categoria 2
                     </Link>
                     </li>
                     <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to={"/categoria/3"}>
+                    <Link to="/categoria/3" class="nav-link active" aria-current="page">
                         Categoria 3
                     </Link>
                     </li>
