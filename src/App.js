@@ -13,9 +13,9 @@ const App = () => {
       
       <Main/>
 
-      <Routes path="/" component={ItemListContainer} exact />
-      <Routes path="/categoria/:id" component={ItemListContainer}/>
-      <Routes path="/item/:id" component={ItemDetailContainer}/>
+      <Routes exact path='/' component={ItemListContainer}/>
+      <Routes path='/categoria/:id' component={ItemListContainer}/>
+      <Routes path='/item/:id' component={ItemDetailContainer}/>
       
       <Footer/>
     </BrowserRouter>

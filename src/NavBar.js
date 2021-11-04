@@ -2,9 +2,9 @@ import Cart from "./CartWidget";
 import { Link , NavLink } from "react-router-dom";
 const Nav = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <NavLink class="navbar-brand" to="/" exact>
+                <NavLink class="navbar-brand" to={"/"} exact>
                 <img src="./LOGO.png" width="100px" alt="" />                
                 </NavLink>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,17 +13,17 @@ const Nav = () => {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to="/categoria/1">
+                    <Link class="nav-link active" aria-current="page" to={"/categoria/1"}>
                         Categoria 1
                     </Link>
                     </li>
                     <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to="/categoria/2">
+                    <Link class="nav-link active" aria-current="page" to={"/categoria/2"}>
                         Categoria 2
                     </Link>
                     </li>
                     <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to="/categoria/3">
+                    <Link class="nav-link active" aria-current="page" to={"/categoria/3"}>
                         Categoria 3
                     </Link>
                     </li>
@@ -31,8 +31,7 @@ const Nav = () => {
                 </ul>
                 </div>
             </div>
-        </nav>
-);
-};
+        </nav> 
+    );}
 
 export default Nav;
