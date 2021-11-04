@@ -16,7 +16,7 @@ const ItemListContainer = ()  =>{
             const promesa = new Promise((resolve, reject) => {
 
             setTimeout(() => {
-                resolve(productos.filter(prod => prod.categoria == id));}, 1000);
+                resolve(productos.filter(prod => prod.categoria === id));}, 1000);
             },[]);
 
                 promesa
@@ -36,8 +36,6 @@ const ItemListContainer = ()  =>{
                 .catch(() => {console.log("Intente nuevamente")})
                 
         }
-
-
         }, []);
     
         
