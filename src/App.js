@@ -12,10 +12,10 @@ const App = () => {
       <Header/>
       
       <Main/>
-
-      <Routes exact path='/' component={ItemListContainer}/>
-      <Routes path='/categoria/:id' component={ItemListContainer}/>
-      <Routes path='/item/:id' component={ItemDetailContainer}/>
+      
+            <Routes exact path='/' component={ItemListContainer}/>
+            <Routes path='/categoria/:id' component={ItemListContainer}/>
+            <Routes path='/item/:id' component={ItemDetailContainer}/>
       
       <Footer/>
     </BrowserRouter>
