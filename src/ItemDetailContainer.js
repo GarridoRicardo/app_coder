@@ -1,21 +1,30 @@
 import { useState, useEffect } from "react"
 import ItemDetail from "./ItemDetail"
 import productos from "./productos.json"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
 
+    const { id } = useParams()
+
     const [producto, setProducto] = useState([])
     useEffect(() => {
+        if(id){
         promesa
             .then(data => {
                 setTimeout(() => {
-                    getItem(data)
-                }, 2000)})
-            .catch(() => {
-                console.log("error")
-            })
-    }, [])
-
+                    getItem(data.filter(item => item.id === id))
+                }, 2000)
+            })}
+            else{
+                promesa
+                .catch(()=>{
+                    console.log("Error")
+                })
+            }
+            
+        }, [])
+        
     const getItem = (data) => {
         setProducto(data)
     }

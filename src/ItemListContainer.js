@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import productos from "./productos.json"
-import ItemList from "./ItemList"
 import { useParams } from 'react-router-dom';
+import ItemList from "./ItemList"
+import productos from "./productos.json"
 
 
 const ItemListContainer = ()  =>{
@@ -13,14 +13,16 @@ const ItemListContainer = ()  =>{
     useEffect(() => {
 
         if(id){
+
+            
             const promesa = new Promise((resolve, reject) => {
 
             setTimeout(() => {
-                resolve(productos.filter(prod => prod.categoria === id));}, 1000);
-            },[]);
+                resolve(productos.filter(prod => prod.categoria == id));}, 1000);
+            },);
 
                 promesa
-                .then((data) => {setEstado(data)}
+                .then((data) => {setEstado(data);}
                 )
                 .catch(() => {console.log("Intente nuevamente")})
 

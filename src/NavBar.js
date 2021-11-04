@@ -4,7 +4,7 @@ const Nav = () => {
     return (
        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <NavLink class="navbar-brand" to={"/"} exact>
+                <NavLink class="navbar-brand" to="/" exact>
                 <img src="./LOGO.png" width="100px" alt="" />                
                 </NavLink>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
