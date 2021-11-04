@@ -1,23 +1,43 @@
 import { useState, useEffect } from 'react';
 import productos from "./productos.json"
 import ItemList from "./ItemList"
+import { useParams } from 'react-router-dom';
+
 
 const ItemListContainer = ()  =>{
     
+    const {id} = useParams();
     
     const[estado, setEstado] = useState([]);
     
     useEffect(() => {
-        const promesa = new Promise((resolve, reject) => {
+
+        if(id){
+            const promesa = new Promise((resolve, reject) => {
+
             setTimeout(() => {
-                setEstado(productos);
-                },2000);
-            }, []);
-            
-            promesa
-            .then(() => {console.log("Se ha solicitado tu pedido")}
-            )
-            .catch(() => {console.log("Intente nuevamente")})
+                resolve(productos.filter(prod => prod.categoria == id));}, 1000);
+            },[]);
+
+                promesa
+                .then((data) => {setEstado(data)}
+                )
+                .catch(() => {console.log("Intente nuevamente")})
+
+        }else{
+            const promesa = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(productos);
+                    },2000);
+                }, []);
+                promesa
+                .then((data) => {setEstado(data)}
+                )
+                .catch(() => {console.log("Intente nuevamente")})
+                
+        }
+
+
         }, []);
     
         

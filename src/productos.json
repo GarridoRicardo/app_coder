@@ -4,27 +4,32 @@
         "producto": "Zapatillas", 
         "cantidad": 20,
         "precio": 100,
-        "descripcion": "Zapatillas de futbol"
+        "descripcion": "Zapatillas de futbol",
+        "categoria" : 1
+
     },
     {
         "id": 2, 
         "producto": "Zapatos",
         "cantidad": 30,
         "precio": 200,
-        "descripcion": "Zapatos de salir"
+        "descripcion": "Zapatos de salir",
+        "categoria" : 1
     },
     {
         "id": 3, 
         "producto": "Remeras",
         "cantidad": 40,
         "precio": 300,
-        "descripcion": "Remeras de verano"
+        "descripcion": "Remeras de verano",
+        "categoria" : 2
     },
     {
         "id": 4, 
         "producto": "Pantalones", 
         "cantidad": 50,
         "precio": 400,
-        "descripcion": "Pantalones de Vestir"
+        "descripcion": "Pantalones de Vestir",
+        "categoria" : 3
     }
 ]
