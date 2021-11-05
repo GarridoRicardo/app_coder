@@ -1,40 +1,25 @@
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import productos from "./productos.json"
-import { useParams } from "react-router-dom"
-
 const ItemDetailContainer = () => {
 
     const { id } = useParams()
-
     const [producto, setProducto] = useState([])
+
     useEffect(() => {
-        if(id){
-        promesa
-            .then(data => {
-                setTimeout(() => {
-                    getItem(data.filter(item => item.id === id))
-                }, 2000)
-            })}
-            else{
-                promesa
-                .catch(()=>{
-                    console.log("Error")
-                })
-            }
-            
-        }, [])
-        
-    const getItem = (data) => {
-        setProducto(data)
-    }
-    const promesa = new Promise((resolve) => {
-        resolve(productos)
-    })
+    const promesa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(productos.find(p => p.id == id))
+        }, 2000)
+    });
+    
+    promesa.then(producto => setProducto(producto))
+        }, [id])
 
     return (
         <div>
-            <ItemDetail item={producto}/>
+            <ItemDetail item={productos}/>
         </div>
         
 

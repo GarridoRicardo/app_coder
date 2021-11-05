@@ -2,6 +2,7 @@ import Cart from "./CartWidget";
 import { Link , NavLink } from "react-router-dom";
 const Nav = () => {
     return (
+        <>
        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <NavLink class="navbar-brand" to="/" exact>
@@ -27,11 +28,14 @@ const Nav = () => {
                         Categoria 3
                     </Link>
                     </li>
-                    <Cart />
+                    
                 </ul>
                 </div>
             </div>
+            
         </nav> 
+        <Cart />
+        </>
     );}
 
 export default Nav;

@@ -1,53 +1,34 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList"
-import productos from "./productos.json"
+import productos_JSON from "./productos.json"
 
 
 const ItemListContainer = ()  =>{
     
+    const[estado, setEstado] = useState([]);
     const {id} = useParams();
     
-    const[estado, setEstado] = useState([]);
-    
     useEffect(() => {
-
-        if(id){
-
-            
             const promesa = new Promise((resolve, reject) => {
-
             setTimeout(() => {
-                resolve(productos.filter(prod => prod.categoria == id));}, 1000);
+                resolve(productos_JSON.filter(prod => prod.categoria == id));}, 1000);
+                
             },);
 
                 promesa
-                .then((data) => {setEstado(data);}
+                .then((data) => {setEstado(data)},[id]
                 )
                 .catch(() => {console.log("Intente nuevamente")})
-
-        }else{
-            const promesa = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(productos);
-                    },2000);
-                }, []);
-                promesa
-                .then((data) => {setEstado(data)}
-                )
-                .catch(() => {console.log("Intente nuevamente")})
-                
-        }
         }, []);
-    
-        
+
     if(estado.length === 0){
         return <div>Cargando Productos, por favor espere...</div>
     }else{
     return (
     <>
         <div>
-        <ItemList stock={productos}/>
+        <ItemList stock={estado}/>
         </div>
     </>
     )}
