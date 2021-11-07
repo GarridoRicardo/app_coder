@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
     }else{
     return (
         <div>
-            <ItemDetail item={productos}/>
+            <ItemDetail item={producto}/>
         </div>
     )
 }
