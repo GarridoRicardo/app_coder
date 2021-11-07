@@ -1,7 +1,6 @@
 import ItemCount from "./ItemCount"
 const ItemDetail = ({item}) => {
 
-
     const stateUpliftingDesdeCounter = (dataCount) =>{
 
        console.log(dataCount);
@@ -10,10 +9,10 @@ const ItemDetail = ({item}) => {
     return (
         <div>
             <img src="https://via.placeholder.com/250" alt="item" />
-            <p>{item.id}</p>
-            <p>{item.producto}</p>
-            <p>{item.cantidad}</p>
-            <ItemCount stock={3} initial={1} onAdd={stateUpliftingDesdeCounter}/>
+            <p>Producto N°: {item.id}</p>
+            <p>Nombre: {item.producto}</p>
+            <p>Stcok disponible: {item.cantidad}</p>
+            <ItemCount stock={item.cantidad} initial={1} onAdd={stateUpliftingDesdeCounter}/>
         </div>
         
     )
