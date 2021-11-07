@@ -16,3 +16,10 @@ html , body {
     justify-content: space-between;
     box-shadow: 0 2px 15px rgb(11, 151, 53);
 };
+
+#categoria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}

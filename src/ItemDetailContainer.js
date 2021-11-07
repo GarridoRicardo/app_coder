@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
         }, [id])
 
     if(producto.length === 0){
-            return <div>Cargando Productos, por favor espere...</div>
+            return <div>Cargando Detalle de Producto, por favor espere...</div>
     }else{
     return (
         <div>
