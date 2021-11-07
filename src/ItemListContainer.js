@@ -12,7 +12,7 @@ const ItemListContainer = ()  =>{
     useEffect(() => {
             const promesa = new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(productos_JSON.filter(prod => prod.categoria == id));}, 1000);
+                resolve(productos_JSON.filter(prod => prod.categoria == id));}, 2000);
                 
             },);
 
