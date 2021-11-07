@@ -27,16 +27,3 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
-
-/**
-
-const resultado = fetch("https://fakestoreapi.com/products?limit=5")
-resultado
-.then((data)  => {
-        const productos_json = data.json()
-        return productos_json
-}
-.then((array_productos) => {
-    console.log(array_productos)))
- * 
- */

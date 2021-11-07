@@ -19,11 +19,11 @@ const ItemCount = ({stock,initial,onAdd}) => {
     
     return (
         <>
-        <form className="form-ItemCount">
+        <form>
             <p>El contador va : {contador}</p>
             <button onClick={sumar} className="material-icons">add</button>
             <button onClick={restar} className="material-icons">remove</button>
-            <button onClick={onAdd}>Agregar al carrito</button>
+            <button onClick={() => onAdd(contador)}>Confirmar Compra</button>
         </form>
         </>
     )
