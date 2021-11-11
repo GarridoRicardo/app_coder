@@ -10,7 +10,6 @@ const ItemDetail = ({ item }) => {
   const [mostrar, setMostrar] = useState(false);
 
   const onAdd = (dataCount) => {
-      console.log("Test")
     addToCart(item, dataCount);
     setMostrar(true);    
   };

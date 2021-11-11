@@ -4,8 +4,8 @@ import Footer from "./Footer";
 import Main from "./Main";
 import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
-import CartWidget from "./CartWidget";
 import CustomComponet from "./cartContext";
+import Cart from "./Cart";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
                   <Route exact path="/productos" component={ItemListContainer}/>
                   <Route exact path="/categoria/:id" component={ItemListContainer}/>
                   <Route path="/item/:id" component={ItemDetailContainer}/>
-                  <Route path="/cart" component={CartWidget}/>
+                  <Route path="/cart" component={Cart}/>
             </Switch>
             <Footer/>
         </CustomComponet>

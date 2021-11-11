@@ -1,4 +1,4 @@
-const Cart = () => {
+const CartWidget = () => {
     return(
         <span className="material-icons">
         shopping_cart
@@ -6,4 +6,4 @@ const Cart = () => {
     )
 }
 
-export default Cart
+export default CartWidget
