@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { contexto } from "./cartContext";
 const Nav = () => {
 
-    const {cart} =useContext(contexto);
+    const {cart} = useContext(contexto);
     console.log(cart);
     
     return (

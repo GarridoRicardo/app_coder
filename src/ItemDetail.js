@@ -6,11 +6,12 @@ import { useHistory } from "react-router-dom";
 const ItemDetail = ({ item }) => {
 
   const {push} = useHistory();  
-  const { addToCart } = useContext(contexto);
+  const { addToCart } = useContext(contexto); 
+
   const [mostrar, setMostrar] = useState(false);
 
   const onAdd = (dataCount) => {
-    addToCart(item, dataCount);
+  addToCart(item, dataCount); 
     setMostrar(true);    
   };
 

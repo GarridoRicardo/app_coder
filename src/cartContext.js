@@ -8,13 +8,27 @@ const CustomComponet = ({children}) => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (producto,cantidad) => {
-        console.log("soy el contexto en cart");
-/*         console.log(producto,cantidad); */
+        console.log("soy agregar producto");
+        console.log(producto,cantidad);
+        setCart([...cart, {producto,cantidad}]);
+    }
+
+    const isInCart = () => {
+    }
+
+    const removeFromCart = (producto) => {
+         setCart(cart.filter(item => item.producto !== producto));
+    }
+
+    const vaciar = () => {
+        setCart([]);
     }
 
     const valorDelContexto = {
-        cart: cart,
-        addToCart: addToCart
+        cart : cart,
+        addToCart : addToCart,
+        removeFromCart : removeFromCart,
+        vaciar : vaciar
     }
 
     return (
