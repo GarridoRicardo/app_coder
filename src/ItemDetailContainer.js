@@ -6,17 +6,15 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams()
     const [producto, setProducto] = useState([])
-
-    useEffect(() => {
-    const promesa = new Promise((resolve, reject) => {
+    const promesa = new Promise((resolve, reject) =>{
         setTimeout(() => {
             resolve(productos.find(p => p.id == id))
-        }, 1000)
-    });
-    
-    promesa.then(producto => setProducto(producto))
-        }, [id])
+        }, 1000)})
+    useEffect(() => {
+        promesa.then(producto => setProducto(producto))
+    }, [id])
 
+    
     if(producto.length === 0){
             return <div>Cargando Detalle de Producto, por favor espere...</div>
     }else{

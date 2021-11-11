@@ -1,7 +1,7 @@
 const Cart = () => {
     return(
         <span className="material-icons">
-        add_shopping_cart
+        shopping_cart
         </span>
     )
 }

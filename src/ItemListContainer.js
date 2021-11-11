@@ -11,8 +11,13 @@ const ItemListContainer = ()  =>{
     
     useEffect(() => {
             const promesa = new Promise((resolve, reject) => {
+
             setTimeout(() => {
-                resolve(productos_JSON.filter(prod => prod.categoria == id));}, 2000);
+                if (id) {
+                    resolve(productos_JSON.filter(prod => prod.categoria == id))   
+                }else{ 
+                    resolve(productos_JSON)}
+                ;}, 2000);
                 
             },);
 

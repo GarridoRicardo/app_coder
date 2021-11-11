@@ -18,12 +18,10 @@ const ItemCount = ({stock,initial,onAdd}) => {
     
     return (
         <>
-        <form>
             <p>El contador va : {contador}</p>
             <button onClick={sumar} className="material-icons">add</button>
             <button onClick={restar} className="material-icons">remove</button>
-            <button onClick={() => onAdd(contador)}>Agregar al Carrito</button>
-        </form>
+            <button onClick={() => onAdd(contador)}>Agregar Producto</button>
         </>
     )
 }

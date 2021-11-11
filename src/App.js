@@ -5,22 +5,25 @@ import Main from "./Main";
 import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
 import CartWidget from "./CartWidget";
-
+import CustomComponet from "./cartContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header/>
-      <Switch>
-            <Route exact path="/" component={Main}/>
-            <Route exact path="/productos" component={ItemListContainer}/>
-            <Route exact path="/categoria/:id" component={ItemListContainer}/>
-            <Route path="/item/:id" component={ItemDetailContainer}/>
-            <Route path="/cart" component={CartWidget}/>
-      </Switch>
-      
-      <Footer/>
-    </BrowserRouter>
+
+      <BrowserRouter>
+          <CustomComponet>
+            <Header/>
+            <Switch>
+                  <Route exact path="/" component={Main}/>
+                  <Route exact path="/productos" component={ItemListContainer}/>
+                  <Route exact path="/categoria/:id" component={ItemListContainer}/>
+                  <Route path="/item/:id" component={ItemDetailContainer}/>
+                  <Route path="/cart" component={CartWidget}/>
+            </Switch>
+            <Footer/>
+        </CustomComponet>
+      </BrowserRouter>
+
   );
 };
 export default App;
