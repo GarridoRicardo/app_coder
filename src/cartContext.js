@@ -13,11 +13,8 @@ const CustomComponet = ({children}) => {
         setCart([...cart, {producto,cantidad}]);
     }
 
-    const isInCart = () => {
-    }
-
     const removeFromCart = (producto) => {
-         setCart(cart.filter(item => item.producto !== producto));
+        setCart([...cart.filter(item => item.producto.id !== producto.id)]);
     }
 
     const vaciar = () => {
@@ -38,23 +35,9 @@ const CustomComponet = ({children}) => {
 }
 export default CustomComponet
 
-
-/*     const agregarProducto = (producto) => {
-            const nuevoProducto = {cantidad,producto};
-            const copia = [...cart];
-            copia.push(nuevoProducto);
-            setCart(copia);
-    }
-
-    const eliminarProducto = (producto) => {
-        const copia = [...cart];
-        const index = copia.findIndex(item => item.producto === producto);
-        copia.splice(index,1);
-        setCart(copia);}
-    
+/*     
         const isInCart = (producto) => {
             const index = cart.findIndex(item => item.producto === producto);
             return index >= 0;
         }
-            const vaciar = () => {
-        setCart([]);} */
+    */
