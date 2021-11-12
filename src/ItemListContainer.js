@@ -23,7 +23,7 @@ const ItemListContainer = ()  =>{
                 .then((data) => {setEstado(data)},[id]
                 )
                 .catch(() => {console.log("Intente nuevamente")})
-        }, []);
+        }, [id]);
 
     if(estado.length === 0){
         return <div>Cargando Productos, por favor espere...</div>
