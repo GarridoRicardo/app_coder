@@ -4,7 +4,7 @@ import ItemList from "./ItemList"
 const Main = () => {
     return(
     <>
-        <h2>Aca va una portada de Bienvenida</h2>
+        <h2>Agregar todos los productos</h2>
     </>
     )
 }

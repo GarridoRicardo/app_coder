@@ -6,7 +6,7 @@ const Header = () => {
       <Nav />
       
       <div>
-        <h2>Productos</h2>
+        <h2>Aca va una portada de Bienvenida</h2>
       </div>
     </header>
   );

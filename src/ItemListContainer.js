@@ -8,9 +8,8 @@ const ItemListContainer = ()  =>{
     
     const[estado, setEstado] = useState([]);
     const {id} = useParams();
-    
     useEffect(() => {
-            const promesa = new Promise((resolve, reject) => {
+        const promesa = new Promise((resolve, reject) => {
 
             setTimeout(() => {
                 if (id) {
@@ -20,7 +19,6 @@ const ItemListContainer = ()  =>{
                 ;}, 2000);
                 
             },);
-
                 promesa
                 .then((data) => {setEstado(data)},[id]
                 )
