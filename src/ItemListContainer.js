@@ -16,7 +16,7 @@ const ItemListContainer = ()  =>{
                     resolve(productos_JSON.filter(prod => prod.categoria == id))   
                 }else{ 
                     resolve(productos_JSON)}
-                ;}, 2000);
+                ;}, 1000);
                 
             },);
                 promesa

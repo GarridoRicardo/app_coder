@@ -6,6 +6,7 @@ import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
 import CustomComponet from "./cartContext";
 import Cart from "./Cart";
+import Checkout from "./Checkout";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Header/>
             <Switch>
                   <Route exact path="/" component={Main}/>
+                  <Route path="/checkout" component={Checkout}/>
                   <Route exact path="/productos" component={ItemListContainer}/>
                   <Route exact path="/categoria/:id" component={ItemListContainer}/>
                   <Route path="/item/:id" component={ItemDetailContainer}/>

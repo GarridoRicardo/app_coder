@@ -35,6 +35,11 @@ const Nav = () => {
                         Categoria 3
                     </Link>
                     </li>
+                    <li className="nav-item">
+                    <Link to="/checkout" className="nav-link active" aria-current="page">
+                        Cuenta
+                    </Link>
+                    </li>
                     
                 </ul>
                 </div>
