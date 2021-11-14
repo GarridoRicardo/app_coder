@@ -4,14 +4,13 @@ import { contexto } from "./cartContext";
 import { useHistory } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
-
+ 
   const {push} = useHistory();  
   const { addToCart } = useContext(contexto); 
-
   const [mostrar, setMostrar] = useState(false);
 
-  const onAdd = (dataCount) => {
-  addToCart(item, dataCount); 
+  const onAdd = (cantidad) => {
+    addToCart(item, cantidad); 
     setMostrar(true);    
   };
 

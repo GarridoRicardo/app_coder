@@ -11,9 +11,8 @@ const Item = ({ elemento }) => {
           <p>Cantidad: {elemento.cantidad}</p>
           <p>Precio:AR$ {elemento.precio}</p>
           <button className="btn btn-ligh">
-            <Link to={`/item/${elemento.id}`}>Ver detalle del producto</Link>
+            <Link to={`/item/${elemento.id}`}>Ver Detalle</Link>
           </button>
-          
           {/* <ItemCount stock={elemento.cantidad} initial={0} onAdd={()=>{console.log("acabas de comprar")}}/> */}
         </div>
       </div>
