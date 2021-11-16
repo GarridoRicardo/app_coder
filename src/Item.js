@@ -7,8 +7,8 @@ const Item = ({ elemento }) => {
         <div className="card-item">
           <img src="https://via.placeholder.com/150" alt="" />
           <p>Categoria: {elemento.categoria}</p>
-          <p>Nombre: {elemento.producto}</p>
-          <p>Cantidad: {elemento.cantidad}</p>
+          <p>Nombre: {elemento.nombre}</p>
+          <p>Cantidad: {elemento.stock}</p>
           <p>Precio:AR$ {elemento.precio}</p>
           <button className="btn btn-ligh">
             <Link to={`/item/${elemento.id}`}>Ver Detalle</Link>
