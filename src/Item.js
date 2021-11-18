@@ -5,8 +5,8 @@ const Item = ({ elemento }) => {
     <>
       <div className="card">
         <div className="card-item">
-          <img src="https://via.placeholder.com/150" alt="" />
-          <p>Categoria: {elemento.categoria}</p>
+          <img src="https://via.placeholder.com/150" alt="imagen del producto" />
+          <p>Categoria: {elemento.idCategoria}</p>
           <p>Nombre: {elemento.nombre}</p>
           <p>Cantidad: {elemento.stock}</p>
           <p>Precio:AR$ {elemento.precio}</p>

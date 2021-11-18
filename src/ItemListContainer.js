@@ -2,33 +2,46 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList"
 import {firestore} from "./firebase"
-import productos_JSON from "./productos.json"
-
-
+/* import productos_JSON from "./productos.json" */
 const ItemListContainer = ()  =>{
-    
     const[estado, setEstado] = useState([]);
     const {id} = useParams();
     useEffect(() => {
-        const promesa = new Promise((resolve, reject) => {
 
-            setTimeout(() => {
-                if (id) {
-                    resolve(productos_JSON.filter(prod => prod.categoria == id))   
-                }else{ 
-                    resolve(productos_JSON)}
-                ;}, 1000);
-                
-            },);
-                promesa
-                .then((data) => {setEstado(data)},[id]
-                )
-                .catch(() => {console.log("Intente nuevamente")})
-        }, [id]);
+        const db = firestore
+        const collection = db.collection("productos")  
 
-    if(estado.length === 0){
-        return <div>Cargando Productos, por favor espere...</div>
-    }else{
+        if(id){
+        const query = collection.where("idCategoria", "==", id)
+        const promesa = query.get() 
+            promesa 
+                .then((documento) => {
+                    const estado = []
+                    documento.docs.forEach(doc => {
+                        const producto = {...doc.data(), id: doc.id}
+                        estado.push(producto)})
+                        setEstado(estado)
+                })
+                .catch(() => {
+                    console.log("No anda");
+                }) 
+        }else{
+            const promesa = collection.get()
+            promesa
+                .then((documento) => {
+                    const estado = []
+                    documento.docs.forEach(doc => {
+                        const producto = {...doc.data(), id: doc.id}
+                        estado.push(producto)})
+                        setEstado(estado)
+                })
+                .catch(() => {
+                    console.log("No anda");
+                })
+            
+        }
+    }, [id]) 
+
     return (
     <>
         <div>
@@ -36,6 +49,5 @@ const ItemListContainer = ()  =>{
         </div>
     </>
     )}
-}
 
 export default ItemListContainer;
