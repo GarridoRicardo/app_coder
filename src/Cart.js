@@ -31,6 +31,7 @@ const Cart = () => {
 
     query.then((resultado) => {
       setId(resultado.id);
+      vaciar();
     });
   };
 
