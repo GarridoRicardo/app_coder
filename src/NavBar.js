@@ -37,7 +37,7 @@ const Nav = () => {
                     </li>
                     <li className="nav-item">
                     <Link to="/checkout" className="nav-link active" aria-current="page">
-                        Cuenta
+                        Login
                     </Link>
                     </li>
                     

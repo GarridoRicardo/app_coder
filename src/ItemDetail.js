@@ -2,7 +2,6 @@ import ItemCount from "./ItemCount";
 import { useState, useContext } from "react";
 import { contexto } from "./cartContext";
 import { useHistory } from "react-router-dom";
-import {firestore} from "./firebase"
 
 const ItemDetail = ({ item }) => {
  
@@ -11,18 +10,18 @@ const ItemDetail = ({ item }) => {
   const [mostrar, setMostrar] = useState(false);
 
   const onAdd = (cantidad) => {
-    addToCart(item, cantidad); 
+    addToCart(item,cantidad); 
     setMostrar(true);    
   };
 
 const redireccionar = () => {
-push("/cart");
+push("/Cart");
 }
 
 return (
       <div>
         <img src="https://via.placeholder.com/250" alt="item" />
-        <p>Producto N°: {item.id}</p>
+        <p>Producto N°: {item.idCategoria}</p>
         <p>Nombre: {item.nombre}</p>
         <p>Stock disponible: {item.stock}</p>
         <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />

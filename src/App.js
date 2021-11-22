@@ -7,6 +7,7 @@ import ItemDetailContainer from "./ItemDetailContainer";
 import CustomComponet from "./cartContext";
 import Cart from "./Cart";
 import Checkout from "./Checkout";
+import SuccesBuy from "./SuccesBuy";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
                   <Route exact path="/categoria/:id" component={ItemListContainer}/>
                   <Route path="/item/:id" component={ItemDetailContainer}/>
                   <Route path="/cart" component={Cart}/>
+                  <Route path="/SuccesBuy" component={SuccesBuy}/>
             </Switch>
             <Footer/>
         </CustomComponet>

@@ -16,27 +16,19 @@ const ItemListContainer = ()  =>{
         const promesa = query.get() 
             promesa 
                 .then((documento) => {
-                    const estado = []
-                    documento.docs.forEach(doc => {
-                        const producto = {...doc.data(), id: doc.id}
-                        estado.push(producto)})
-                        setEstado(estado)
+                        setEstado(documento.docs.map(doc => ({...doc.data(), id: doc.id})))
                 })
                 .catch(() => {
-                    console.log("No anda");
+                    console.log("No funciona List Container");
                 }) 
         }else{
             const promesa = collection.get()
             promesa
                 .then((documento) => {
-                    const estado = []
-                    documento.docs.forEach(doc => {
-                        const producto = {...doc.data(), id: doc.id}
-                        estado.push(producto)})
-                        setEstado(estado)
+                        setEstado(documento.docs.map(doc => ({...doc.data(), id: doc.id})))
                 })
                 .catch(() => {
-                    console.log("No anda");
+                    console.log("No funciona List Container");
                 })
             
         }
@@ -45,7 +37,7 @@ const ItemListContainer = ()  =>{
     return (
     <>
         <div>
-        <ItemList stock={estado}/>
+        <ItemList props={estado}/>
         </div>
     </>
     )}

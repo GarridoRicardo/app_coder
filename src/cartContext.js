@@ -6,33 +6,28 @@ const CustomComponet = ({children}) => {
 
     const [cart, setCart] = useState([]);
 
-    //Agregando Productos al carrito
     const addToCart = (producto,cantidad) => {
-        //Aplico condicional para verificar si el producto ya existe en el carrito
-        if(isInCart(producto.id)){
+        if(isInCart(producto.idCategoria)){
             //Ejecuto un map para recorrer el la copia de cart. 
             //Si el producto ya existe en el carrito es decir que su id es igual, entonces "pusheo" la cantidad al item, sino solo dejo el item
             setCart([...cart.map(item => {
-                if(item.producto.id === producto.id){
+                if(item.producto.idCategoria === producto.idCategoria){
                     item.cantidad += cantidad;
                 }
                 return item;
             })])
-
-        //Si es distinto entonces pusheo el producto al carrito
         }else{
         setCart([...cart, {producto,cantidad}]);
     }}
-
     //Funcion que me valida si el producto ya esta en el carrito
-    const isInCart = (id) => {
-        const productoCarrito = cart.find(item => item.producto.id === id);
+    const isInCart = (idCategoria) => {
+        const productoCarrito = cart.find(item => item.producto.idCategoria === idCategoria);
         return productoCarrito;
     }
-
+    
     //Restando Productos del carrito
     const removeFromCart = (producto) => {
-        setCart([...cart.filter(item => item.producto.id !== producto.id)]);
+        setCart([...cart.filter(item => item.producto.idCategoria !== producto.idCategoria)]);
     }
 
      //Vaciar carrito

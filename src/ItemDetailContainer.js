@@ -1,18 +1,11 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router"
 import ItemDetail from "./ItemDetail"
-/* import productos from "./productos.json" */
 import {firestore} from "./firebase"
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState([])
-    const { id } = useParams()
-
-/*     const promesa = new Promise((resolve, reject) =>{
-        setTimeout(() => {
-            resolve(productos.find(p => p.id == id))
-        }, 1000)}) */
-/* promesa.then(producto => setProducto(producto)) */
+    const [producto, setProducto] = useState({})
+    const { id } = useParams();
 
     useEffect(() => {
 
@@ -23,8 +16,10 @@ const ItemDetailContainer = () => {
         
         promesa
             .then((documento) => {
+                console.log("Consulta exitosa")
                 const data = documento.data()
-                setProducto(data)}
+                setProducto(data)
+            }
             )
             .catch(() => {
                 console.log("No anda");
@@ -32,16 +27,12 @@ const ItemDetailContainer = () => {
             
         }, [id])
 
- 
-    if(producto.length === 0){
-            return <div>Cargando Detalle de Producto, por favor espere...</div>
-    }else{
     return (
         <div>
             <ItemDetail item={producto}/>
         </div>
     )
-}
+
 }
 
 export default ItemDetailContainer
