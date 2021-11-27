@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
-import { contexto } from "./cartContext";
+import { contexto } from "./CartContext";
 import { Link } from "react-router-dom";
 import firebase from "firebase/app";
 import { firestore } from "./firebase";
+import {Checkout} from './Checkout'
 /* import SuccesBuy from "./SuccesBuy"; */
 
 const Cart = () => {
@@ -39,8 +40,7 @@ const Cart = () => {
     return (
       <div>
         <p>Tu orden se proceso con exito!</p>
-        <p>
-          Numero de Compra : #<strong>{id}</strong>
+        <p>Numero de Compra : #<strong>{id}</strong>
         </p>
       </div>
     );
@@ -89,16 +89,12 @@ const Cart = () => {
                   </div>
                 );
               })}
-              <Link to={`/productos`} className="btn btn-primary">
+              <Link to={`/`} className="btn btn-primary">
                 Seguir Comprando
               </Link>
               <button className="btn btn-success" onClick={finalizar}>
                 Finalizar Compra
               </button>
-
-              {/*<Link to={`/checkout`} className="btn btn-success">
-                  Terminar mi compra
-                </Link> */}
               <button className="btn btn-danger" onClick={vaciar}>
                 Vaciar
               </button>
