@@ -1,6 +1,6 @@
 import ItemCount from "./ItemCount";
 import { useState, useContext } from "react";
-import { contexto } from "./cartContext";
+import { contexto } from "./CartContext";
 import { useHistory } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
@@ -23,6 +23,7 @@ return (
         <img src="https://via.placeholder.com/250" alt="item" />
         <p>Producto N°: {item.idCategoria}</p>
         <p>Nombre: {item.nombre}</p>
+        <p>Precio por Unidad:AR$ {item.precio}</p>
         <p>Stock disponible: {item.stock}</p>
         <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
         { mostrar && <button onClick={redireccionar}>Ver en Carrito</button> }
