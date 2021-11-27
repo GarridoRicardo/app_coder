@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   const { cart } = useContext(contexto);
   console.log(cart);
-
   return (
     <div>
       <Link to="/Cart" className="nav-link active" aria-current="page">
@@ -18,5 +17,4 @@ const CartWidget = () => {
     </div>
   );
 };
-
 export default CartWidget;

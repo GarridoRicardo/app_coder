@@ -9,7 +9,6 @@ import Checkout from "./Checkout";
 
 const App = () => {
   return (
-
       <BrowserRouter>
           <CustomComponet>
             <Header/>
@@ -23,7 +22,6 @@ const App = () => {
             <Footer/>
         </CustomComponet>
       </BrowserRouter>
-
   );
 };
 export default App;

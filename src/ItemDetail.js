@@ -2,22 +2,17 @@ import ItemCount from "./ItemCount";
 import { useState, useContext } from "react";
 import { contexto } from "./CartContext";
 import { useHistory } from "react-router-dom";
-
 const ItemDetail = ({ item }) => {
- 
   const {push} = useHistory();  
   const { addToCart } = useContext(contexto); 
   const [mostrar, setMostrar] = useState(false);
-
   const onAdd = (cantidad) => {
     addToCart(item,cantidad); 
     setMostrar(true);    
   };
-
 const redireccionar = () => {
 push("/Cart");
 }
-
 return (
       <div>
         <img src="https://via.placeholder.com/250" alt="item" />
@@ -30,5 +25,4 @@ return (
       </div>
     );
   }
-
 export default ItemDetail;

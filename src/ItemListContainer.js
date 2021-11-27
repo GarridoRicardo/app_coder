@@ -2,15 +2,12 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList"
 import {firestore} from "./firebase"
-/* import productos_JSON from "./productos.json" */
 const ItemListContainer = ()  =>{
     const[estado, setEstado] = useState([]);
     const {id} = useParams();
     useEffect(() => {
-
         const db = firestore
         const collection = db.collection("productos")  
-
         if(id){
         const query = collection.where("idCategoria", "==", id)
         const promesa = query.get() 
@@ -30,7 +27,6 @@ const ItemListContainer = ()  =>{
                 .catch(() => {
                     console.log("No funciona List Container");
                 })
-            
         }
     }, [id]) 
 
@@ -41,5 +37,4 @@ const ItemListContainer = ()  =>{
         </div>
     </>
     )}
-
 export default ItemListContainer;

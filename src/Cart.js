@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import firebase from "firebase/app";
 import { firestore } from "./firebase";
 import {Checkout} from './Checkout'
-/* import SuccesBuy from "./SuccesBuy"; */
 
 const Cart = () => {
   const { cart, vaciar, removeFromCart } = useContext(contexto);

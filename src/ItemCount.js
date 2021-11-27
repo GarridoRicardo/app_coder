@@ -1,8 +1,6 @@
 import {useState} from "react";
 const ItemCount = ({stock,initial,onAdd}) => {
-
     const [contador, setContador] = useState(initial)
-    
     const sumar = (e) =>{
         e.preventDefault()
         if(contador < stock){
@@ -15,7 +13,6 @@ const ItemCount = ({stock,initial,onAdd}) => {
             setContador(contador - 1)
         }
     }
-    
     return (
         <>
             <p>El contador va : {contador}</p>
@@ -25,5 +22,4 @@ const ItemCount = ({stock,initial,onAdd}) => {
         </>
     )
 }
-
 export default ItemCount;
