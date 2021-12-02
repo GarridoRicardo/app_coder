@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Ecommerce Garrido
+Una tienda tipica con el objetivo de poder aplicar los conocimientos adquiridos en la cursada de React JS de CoderHouse.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introducción
+Consiste en una pagina simple, con algunos insumos indumentarios tipicos que permiten dividirse en 3 (tres) catergorias
 
-## Available Scripts
+## Alcance
+El objetivo del desarrollo es lograr crear una tienda electronica en entorno React.
+Respetando la directiva de la cursada y el mismo entorno. Apoyado en los conocimientos de Javascript.
 
-In the project directory, you can run:
+# Api 
+No se utilizaron APIs, se trabajo con productos cargados en Firestore Database
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Dependencias agregadas 
 
-### `npm test`
+### `npm i react-loading`
+Dependecia utilizada para agregar logo de carga, mientras se termina de realizar el fetch.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Link: [https://www.npmjs.com/package/react-loading](https://www.npmjs.com/package/react-loading)
 
-### `npm run build`
+### `npm i react-router-dom`
+Dependecia utilizada para generear un mecanismo de navegación en nuestra web
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Link: [https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm install emailjs-com `
+Dependecia utilizada para el envio de mails para la sección de contacto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Link: [https://www.emailjs.com/docs/](https://www.emailjs.com/docs/)
 
-### `npm run eject`
+### `npm install formik --save`
+Dependecia utilizada para el manejo de formularios de la sección de login y de carrito.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Link: [https://formik.org/docs/overview](https://formik.org/docs/overview)
