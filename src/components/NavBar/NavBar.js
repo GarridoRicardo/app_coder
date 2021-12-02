@@ -37,7 +37,7 @@ const Nav = () => {
                 </div>
             </div>
         </nav> 
-        <CartWidget />
+        <CartWidget/>
         </>
     );}
 export default Nav;

@@ -1,6 +1,6 @@
-import ItemCount from "./ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import { useState, useContext } from "react";
-import { contexto } from "./CartContext";
+import { contexto } from "../Context/CartContext";
 import { useHistory } from "react-router-dom";
 const ItemDetail = ({ item }) => {
   const {push} = useHistory();  

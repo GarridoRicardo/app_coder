@@ -1,9 +1,8 @@
 import { useContext, useState } from "react";
-import { contexto } from "./CartContext";
+import { contexto } from "../Context/CartContext";
 import { Link } from "react-router-dom";
 import firebase from "firebase/app";
-import { firestore } from "./firebase";
-import {Checkout} from './Checkout'
+import { firestore } from "../../firebase";
 
 const Cart = () => {
   const { cart, vaciar, removeFromCart } = useContext(contexto);

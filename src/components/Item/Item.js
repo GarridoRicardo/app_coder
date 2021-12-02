@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 const Item = ({ elemento }) => {
   return (
-    <>
-      <div className="card">
+      <div className="card container-fluid mr-auto">
         <div className="card-item">
           <img src="https://via.placeholder.com/150" alt="imagen del producto" />
           <p>Categoria: {elemento.idCategoria}</p>
@@ -14,7 +13,6 @@ const Item = ({ elemento }) => {
           </button>
         </div>
       </div>
-    </>
   );
 };
 export default Item;

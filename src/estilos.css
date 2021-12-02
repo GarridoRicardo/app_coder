@@ -2,15 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 };
 
 html , body {
     height: 100vh;
+    color: #0f5132;
 };
 
 #header {
     padding: 0.5rem 1rem;
-    background-color: aquamarine;
+    background-color: #0f5132;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,4 +24,14 @@ html , body {
     flex-wrap: wrap;
     justify-content: space-between;
     
+}
+
+
+#footer{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #0f5132;
+    box-shadow: 0 2px 15px rgb(11, 151, 53);
 }
